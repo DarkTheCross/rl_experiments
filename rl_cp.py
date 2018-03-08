@@ -4,6 +4,9 @@ import time
 import tensorflow as tf
 import random
 from collections import deque
+import os
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 class cpsolver():
 

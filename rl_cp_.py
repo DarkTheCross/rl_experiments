@@ -4,6 +4,9 @@ import time
 import tensorflow as tf
 import random
 from collections import deque
+import os
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 class cpsolver():
 
@@ -38,15 +41,8 @@ class cpsolver():
         if random.random() < eps:
             return self.env.action_space.sample()
         else:
-            state0 = np.zeros((5,), dtype=np.float32)
-            state0[:4] = state
-            tmpres0 = self.nnResult.eval(feed_dict={self.x: [state0]})
-            state0[4] = 1
-            tmpres1 = self.nnResult.eval(feed_dict={self.x: [state0]})
-            if tmpres0 > tmpres1:
-                return 0
-            else:
-                return 1
+            tmpres = self.nnResult.eval(feed_dict={self.x: state})
+            return np.max(tmpres)
             #print(tmpres)
 
     def learn(self, batch_size):
