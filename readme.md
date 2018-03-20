@@ -17,4 +17,8 @@ Besides, I also implemented an Apple Picker game (Simplified) and used deep Q le
 
 ![first 300](first300.gif)
 
+First 300 iterations
+
 ![last 300](last300.gif)
+
+Last 300 iterations (Solved!)
