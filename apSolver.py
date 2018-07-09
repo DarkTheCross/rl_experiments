@@ -11,29 +11,19 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 class apSolver:
     def __init__(self, eps_decay = 0.996, gamma = 0.9, eps_min = 0.01):
         self.env = ApplePicker()
-
         self.eps = 1
         self.eps_decay = eps_decay
         self.eps_min = eps_min
         self.gamma = gamma
-
         self.x = tf.placeholder(tf.float32, shape=[None, 7, 7])
         self.y_ = tf.placeholder(tf.float32, shape=[None, 3])
-
         self.x_flatten = tf.contrib.layers.flatten(self.x)
-
         self.x_1 = tf.contrib.layers.fully_connected(self.x_flatten, 64)
-
         self.x_2 = tf.contrib.layers.fully_connected(self.x_1, 128)
-
         self.x_3 = tf.contrib.layers.fully_connected(self.x_2, 64)
-
         self.res_cur = tf.contrib.layers.fully_connected(self.x_3, 3, activation_fn = None)
-
         self.err = tf.losses.huber_loss(self.res_cur, self.y_)
-
         self.train_step =  tf.train.AdamOptimizer(1e-2).minimize(self.err)
-
         self.memory = deque(maxlen=100000)
 
     def decision(self, eps, state):

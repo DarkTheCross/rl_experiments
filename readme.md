@@ -10,15 +10,15 @@ In rl_cp.py, the Q-network takes observation as the input, while the outputs sta
 
 rl_cp_.py is more stable because of better hyper parameters.
 
-![sample](456.png)
+![sample](img/456.png)
 
 Besides, I also implemented an Apple Picker game (Simplified) and used deep Q learning to implement an AI for the game. You
  can see the performance of the AI during the first 300 iterations and last 300 iterations below.
 
-![first 300](first300.gif)
+![first 300](img/first300.gif)
 
 First 300 iterations
 
-![last 300](last300.gif)
+![last 300](img/last300.gif)
 
 Last 300 iterations (Solved!)
