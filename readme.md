@@ -26,6 +26,6 @@ Last 300 iterations (Solved!)
 
 As for the atari game, I'm using the template from Berkely CS294 course for deep q learning with double q networks. The algorithm achieved a average reward of over 20 on Pong-v0 after 4.3M of game steps.
 
-![Pong](img/pong.mp4)
+!video[ Pong ]( img/pong.mp4 ){ size=10 cycle=forever }
 
 GGWP.
