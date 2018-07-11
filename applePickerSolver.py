@@ -1,6 +1,6 @@
 import numpy as np
 import tensorflow as tf
-from ap import ApplePicker
+from applePicker import ApplePicker
 import random
 from collections import deque
 import os
@@ -68,13 +68,13 @@ class apSolver:
                     self.memory.append((obs, act, rwd, newObs, done))
                     if i % 30 == 0 and not i == 0:
                         obsImg = cv2.resize(obs, (420, 420), interpolation = cv2.INTER_LINEAR)*255
-                        cv2.imwrite("img/"+str(i)+"_" + str(imgid) + ".png", obsImg)
+                        #cv2.imwrite("img/"+str(i)+"_" + str(imgid) + ".png", obsImg)
                         imgid += 1
                     count += rwd
                     obs = newObs
                 if i % 30 == 0 and not i == 0:
                     obsImg = cv2.resize(obs, (420, 420))
-                    cv2.imwrite("img/"+str(i)+"_" + str(imgid) + ".png", obsImg)
+                    #cv2.imwrite("img/"+str(i)+"_" + str(imgid) + ".png", obsImg)
                 memrec.append(count)
                 done = False
                 obs = self.env.reset()

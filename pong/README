@@ -1,0 +1,8 @@
+This part is based on the homework of the rl course of UCB.
+
+To run the code, please use gym-0.9.5 rather than the most up-to-date version.
+
+See http://rll.berkeley.edu/deeprlcourse/f17docs/hw3.pdf for instructions
+
+The starter code was based on an implementation of Q-learning for Atari
+generously provided by Szymon Sidor from OpenAI
