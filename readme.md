@@ -16,11 +16,11 @@ cartpoleSolver_.py is more stable because of better hyper parameters.
 Besides, I also implemented an Apple Picker game (Simplified) and used deep Q learning to implement an AI for the game. You
  can see the performance of the AI during the first 300 iterations and last 300 iterations below.
 
-![first 300](img/first300.gif){size = 200}
+![first 300](img/first300.gif){width: 200px}
 
 First 300 iterations
 
-![last 300](img/last300.gif){size = 200}
+![last 300](img/last300.gif){width: 200px}
 
 Last 300 iterations (Solved!)
 
